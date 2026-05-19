@@ -22,8 +22,8 @@ def row_sums(matrix):
     Ejemplo: row_sums([[1, 2, 3], [4, 5, 6]]) -> [6, 15]
     """
     unica_lista = []
-    suma_de_la_fila = 0
     for lista in matrix:
+        suma_de_la_fila = 0
         for elemento in lista:
             suma_de_la_fila += elemento
         unica_lista.append(suma_de_la_fila)
@@ -38,4 +38,14 @@ def col_sums(matrix):
 
     Ejemplo: col_sums([[1, 2, 3], [4, 5, 6]]) -> [5, 7, 9]
     """
-    aaaaaaaaaa
+    nueva_lista = []
+    cantidad_filas = len(matrix)
+    cantidad_columnas = len(matrix[0])
+
+    for columna in range(cantidad_columnas):
+        suma_columna = 0
+        for fila in range(cantidad_filas):
+            suma_columna += matrix[fila][columna]
+        nueva_lista.append(suma_columna)
+
+    return nueva_lista
